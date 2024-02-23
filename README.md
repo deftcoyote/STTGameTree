@@ -129,20 +129,22 @@ The class implementation of the board with a couple of helpful functions. This v
 
 Every position is stored as a 12 character string 123456789ABC where each numbered position is the location in the matrix (below). Every number is 0, 1, 2, where 0 is no piece, 1 is first player piece, and 2 is a 2nd player piece.
 
-> col   0 1 2 
->     | 1 2 3 | row 0
->     | 4 5 6 | row 1
->     | 7 8 9 | row 2
+```
+ col   0 1 2 
+     | 1 2 3 | row 0
+     | 4 5 6 | row 1
+     | 7 8 9 | row 2
+```
 
 The ABC are numbers 0, 1, 2 for the shift of each row where A is row 0. A zero means that it is shifted all the way to the right. 
 
 Example string 021 021 111 210
 
-
->  \- \- | 0 2 1 | 
->    \- | 0 2 1 | \- 
->      | 1 1 2 | \- \-
-
+```
+  - - | 0 2 1 | 
+    - | 0 2 1 | - 
+      | 1 1 2 | - -
+```
 Note that for the game tree, for storage efficiency, it is stored as an unsigned long int with a 5 before it in order to keep the length correct. So 021021111210 -> 5021021111210.
 
 ## doall script (doall.sh)
