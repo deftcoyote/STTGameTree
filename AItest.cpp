@@ -78,15 +78,22 @@ string intos(long int i)
     return si.str();
 }
 
-int main()
+int main(int argc, char* argv[])
 {
     STTGameTree boardtree;
     
     cout<<"Welcome to Shift-Tac-Toe"<<endl;
     
-    cout<<"File (SM_D.pot):";
     string filename;
-    cin >> filename;
+    if (argc > 0)
+    {
+        filename = argv[1];
+    }
+    else
+    {
+        cout << "File (SM_D.pot):";
+        cin >> filename;
+    }
     
     boardtree.LoadTree(filename);
     printf("File %s loaded\n",filename.c_str());
@@ -95,9 +102,16 @@ int main()
     printf("Number of Levels: %u\n", boardtree.GTlevels);
     
     //01
-    cout<<"Starting Moves:";
     string input;
-    cin >> input;
+    if(argc > 1)
+    {
+        input = argv[2];
+    }
+    else
+    {
+        cout<<"Starting Moves:";
+        cin >> input;
+    }
     
     cout << "WLD Function" << endl;
     WLDTree(boardtree.GTroot,'1');

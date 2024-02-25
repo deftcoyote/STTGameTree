@@ -72,9 +72,9 @@ To compile:
 > g++ -o AItest AItest.cpp STTGameTree.h STT3.h 
 
 To run:
-> ./AItest
+> ./AItest [filename] [starting path]
 
-It will ask for the pot file to load, and then for the path (see Path Numbers) of where to go down the tree to find the starting position.
+Without the parameters, it will ask for the pot file to load, and then for the path (see Path Numbers) of where to go down the tree to find the starting position.
 
 
 
