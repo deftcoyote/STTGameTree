@@ -1,3 +1,14 @@
+/*
+* File: STT3.h
+* Author: Tim Wylie
+* Date: 2024
+* Description: Implements a standard 3x3 Shift-Tac-Toe board. Stores the board position as a string. See documentation for more details.
+* 
+*/
+
+
+
+
 #include<string>
 #include<iostream>
 #include<stdlib.h>

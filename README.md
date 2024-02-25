@@ -1,5 +1,5 @@
 
-# ShiftTacToe
+# ShiftTacToe Game Tree
 An implementation of Shift-Tac-Toe in C++ with a game tree to analyze optimal play. The main file specifies the starting moves and builds the tree beginning after those moves (from that configuration). This lets you build any part of the tree without using too many resources. This is a pretty technical implementation for efficiency and encodes a lot of data. Look up tables are provided below.
 
 There is also an AI test file which lets you play against the optimal AI based on the tree you built. You always lose. :)

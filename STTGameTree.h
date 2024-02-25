@@ -1,3 +1,12 @@
+/*
+* File: STTGameTree.h
+* Author: Tim Wylie
+* Date: 2024
+* Description: Creates the Shift Tac Toe game tree object. See documentation for usage.
+* Requirements: STT3.h
+*/
+
+
 
 /*
 #also going to remove starting with shifts or in column 3

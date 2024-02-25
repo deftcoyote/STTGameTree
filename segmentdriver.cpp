@@ -1,5 +1,12 @@
 
-//g++ -o driver segmentdriver.cpp STTGameTree.h STT3.h
+/*
+* File: segmentdriver.cpp
+* Author: Tim Wylie
+* Date: 2024
+* Description: Creates a Shift Tac Toe game tree. Allows building from an arbitrary path in the tree. See documentation for usage.
+* Requirements: STTGameTree.h STT3.h
+*/
+
 #include<string>
 #include<sstream>
 #include<iostream>
@@ -8,60 +15,6 @@
 
 using namespace std;
 
-
-
-//file format 
-//12_X.pod where 1 is the first move and 2 is the 2nd move
-//only allow starting with 1 or 2, and we ignore shifts on empty rows, so segment=2 makes 2*5=10 files
-/*
-
-
-00_X.pod
-01_X.pod
-02_X.pod
-07_X.pod
-08_X.pod
-10_X.pod
-11_X.pod
-12_X.pod
-17_X.pod
-18_X.pod
-
-
-
-using
-
-segmentdriver XYZ A B
-
-XYZ is a path in the tree of starting moves and using that as the root
-0102 is 1st player doing 0, 2nd using 1, etc.
-
-A is the level to load
-7 will load P7.pod if LOADPRUNE is set to true
-0 will not load anything but build from scratch
-
-B is the level to build to and save
-
-
-for a new tree
-./segmentdriver 11 0 7
-
-to then go to level 12
-./segmentdriver 11 7 12
-
-
-
-#0 - add col 0
-#1 - add col 1
-#2 - add col 2
-#3 - shift row 0 left (top row)
-#4 - shift row 0 right
-#5 - shift row 1 left
-#6 - shift row 1 right
-#7 - shift row 2 left (bottom row)
-#8 - shift row 2 right
-
-*/
 
 
 //*********************************************************
