@@ -1,3 +1,15 @@
+/*
+* File: AItest.cpp
+* Author: Tim Wylie
+* Date: 2024
+* Description: Allows the user to play against the game tree for testing purposes. With the full tree, it's an optimal AI. See documentation for usage.
+* Requirements: STTGameTree.h STT3.h
+*/
+
+
+
+
+
 #include<string>
 #include<iostream>
 #include<sstream>
