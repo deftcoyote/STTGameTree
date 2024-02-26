@@ -17,6 +17,9 @@
 #include"STTGameTree.h"
 using namespace std;
 
+
+#define CHARTOINT -48
+
 //does wld tree recursively choosing the best moves
 void WLDTree(Node* node, char p)
 {
@@ -155,8 +158,6 @@ int main(int argc, char* argv[])
         }
         
         
-        
-        
         int choice = -1;
         
         //user move
@@ -167,15 +168,20 @@ int main(int argc, char* argv[])
             cout << ">";
             char cmd;
             cin>>cmd;
-            if(cmd == 'A' || cmd == 'a')
+            switch(cmd)
             {
+            case 'A':
+            case 'a':
+            
                 unsigned int c;
                 cout<<"Column: ";
                 cin>>c;
                 choice = c;
-            }
-            else if( cmd == 'S' || cmd == 's')
-            {
+                break;
+                
+            case 'S': 
+            case 's':
+            
                 int r;
                 char d;
                 cout<<"Row: ";
@@ -196,11 +202,30 @@ int main(int argc, char* argv[])
                 else if (r == 2 && d == 'r')
                     choice = 8;
                 
-            }
-            else if (cmd == 'E' || cmd == 'e' || cmd == 'q')
+                break;
+            case 'E':
+            case 'e':
+            case 'q':
                 run = false;
-            else
+                break;
+            //shortcuts
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':;
+            case '5':;
+            case '6':;
+            case '7':;
+            case '8':;
+            case '9':
+                choice = cmd + CHARTOINT;
+                
+                break;
+            default:
                 run = false;
+                break;
+            };
             
             
         }
